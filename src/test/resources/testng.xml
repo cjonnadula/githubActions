@@ -3,8 +3,8 @@
 <suite name="Suite">
   <test name="Test">
     <classes>
-      <class name="testcases.test1"/>
-      <class name="testcases.test2" />
+      <!--<class name="testcases.test1"/>-->
+      <class name="testcases.Test3" />
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
