@@ -4,7 +4,7 @@
   <test name="Test">
     <classes>
       <!--<class name="testcases.test1"/>-->
-      <class name="testcases.Test1" />
+      <class name="testcases.test1" />
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
