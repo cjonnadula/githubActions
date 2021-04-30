@@ -22,7 +22,7 @@ public class WebDriverBase {
         capabilities.setCapability(CapabilityType.ForSeleniumServer.ENSURING_CLEAN_SESSION, true);
         capabilities.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, UnexpectedAlertBehaviour.IGNORE);
         options.addArguments("test-type");
-       
+        options.addArguments("--headless"); 
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
 		setDriver(new ChromeDriver(options));
