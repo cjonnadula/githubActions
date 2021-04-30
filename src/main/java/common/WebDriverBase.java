@@ -15,7 +15,7 @@ public class WebDriverBase {
 	private static ThreadLocal<WebDriver> driver = new ThreadLocal<WebDriver>();
 	private static WebDriverBase webUtil;
  
-	@BeforeMethod
+	/*@BeforeMethod
 	public void beforeMethod() throws InterruptedException {
 		ChromeOptions options = new ChromeOptions();
         DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -26,7 +26,7 @@ public class WebDriverBase {
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
 		setDriver(new ChromeDriver(options));
-	}
+	}*/
 	
 	private static synchronized void setDriver(WebDriver driver) {
 		WebDriverBase.driver.set(driver);
