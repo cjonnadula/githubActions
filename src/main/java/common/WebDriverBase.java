@@ -12,12 +12,12 @@ import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class WebDriverBase {
-	private static WebDriver driver = new WebDriver();
+	private static WebDriver driver;
 	private static WebDriverBase webUtil;
  
-	/*@BeforeMethod
+	@BeforeMethod
 	public void beforeMethod() throws InterruptedException {
-		ChromeOptions options = new ChromeOptions();
+	ChromeOptions options = new ChromeOptions();
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability(CapabilityType.ForSeleniumServer.ENSURING_CLEAN_SESSION, true);
         capabilities.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, UnexpectedAlertBehaviour.IGNORE);
@@ -25,33 +25,33 @@ public class WebDriverBase {
         options.addArguments("--headless"); 
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
-		setDriver(new ChromeDriver(options));
-	}*/
-	
-	private static synchronized void setDriver(WebDriver driver) {
-		WebDriverBase.driver.set(driver);
+        setDriver(new ChromeDriver(options));
 	}
 	
-	public static synchronized WebDriver getDriver(){
-		return driver.get();
+	private static void setDriver(WebDriver driver) {
+		WebDriverBase.driver=driver;
 	}
-	public static synchronized WebDriverBase getObject(){
+	
+	public static WebDriver getDriver(){
+		return driver;
+	}
+	public static WebDriverBase getObject(){
 		if(webUtil==null){
 			webUtil=new WebDriverBase();
 		}
 		return webUtil;
 	}
 
-	/*@AfterMethod
+	@AfterMethod
 	public  void afterMethod() {
 		WebDriverBase webUtil=WebDriverBase.getObject();
 		webUtil.stopDriver();
 	}
-	*/
+	
 	public void stopDriver() {
 		try {
 			if (driver != null) {
-				driver.get().close();;
+				driver.close();;
 				setDriver(null);
 			}
 		} catch (Exception ignore) {
