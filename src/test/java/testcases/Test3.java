@@ -12,7 +12,7 @@ public class Test3 extends WebDriverBase{
 	
    
     public void testSomeLibraryMethod() throws InterruptedException{
-/*System.setProperty("webdriver.chrome.driver", "C:\\Program Files (x86)\\ChromeDriver\\chromedriver.exe");  
+    //System.setProperty("webdriver.chrome.driver", "C:\\Program Files (x86)\\ChromeDriver\\chromedriver.exe");  
 		WebDriver driver=new ChromeDriver();  
 		
         driver.get("http://www.facebook.com");
@@ -21,7 +21,6 @@ public class Test3 extends WebDriverBase{
         mailID.sendKeys("test1@gmail.com");
         
         driver.close();
-	*/
-	System.out.println("Inside test 3");
+	
 }
 }   
