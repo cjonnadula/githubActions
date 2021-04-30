@@ -12,7 +12,7 @@ import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class WebDriverBase {
-	private static ThreadLocal<WebDriver> driver = new ThreadLocal<WebDriver>();
+	private static WebDriver driver = new WebDriver();
 	private static WebDriverBase webUtil;
  
 	/*@BeforeMethod
