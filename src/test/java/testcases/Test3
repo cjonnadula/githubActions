@@ -10,7 +10,7 @@ import common.WebDriverBase;
 
 public class Test3 extends WebDriverBase{
 	
-    @Test 
+   
     public void testSomeLibraryMethod() throws InterruptedException{
 /*System.setProperty("webdriver.chrome.driver", "C:\\Program Files (x86)\\ChromeDriver\\chromedriver.exe");  
 		WebDriver driver=new ChromeDriver();  
