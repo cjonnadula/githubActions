@@ -42,12 +42,12 @@ public class WebDriverBase {
 		return webUtil;
 	}
 
-	@AfterMethod
+	/*@AfterMethod
 	public  void afterMethod() {
 		WebDriverBase webUtil=WebDriverBase.getObject();
 		webUtil.stopDriver();
 	}
-	
+	*/
 	public void stopDriver() {
 		try {
 			if (driver != null) {
