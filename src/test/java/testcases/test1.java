@@ -11,11 +11,13 @@ public class test1 extends WebDriverBase{
 	
     @Test 
     public void testSomeLibraryMethod() throws InterruptedException{
-    	WebDriverBase.getDriver().get("https://www.facebook.com");   
+	    System.out.println("Inside Test1");
+    	//WebDriverBase.getDriver().get("https://www.facebook.com");   
     	}
     
-    @Test
+   /* @Test
     public void testSecondLibraryMethod() throws InterruptedException{
     	WebDriverBase.getDriver().get("https://www.salesforce.com");   
     	}
+	*/
 }
