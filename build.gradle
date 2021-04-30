@@ -19,6 +19,9 @@ repositories {
 
 test {
     useTestNG() {
+        dependsOn cleanTest
+        useDefaultListeners = true
+        suites "src/test/resources/testng.xml"
     }
 }
 
