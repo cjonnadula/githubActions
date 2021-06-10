@@ -10,6 +10,7 @@ on:
         description: 'Regression Suite Name'     
         required: true
         default: 'smoke' 
+        options: ['smoke', 'regression', 'completeregression']
       testClass:
         description: 'Test Class Path' 
 
@@ -35,7 +36,7 @@ jobs:
       run: |
        echo "Regression Suite: ${{ github.event.inputs.testSuite }}"
        echo "Test Class: ${{ github.event.inputs.testClass }}" 
-       ./gradlew test ${{ github.event.inputs.testClass }} --info
+       ./gradlew test --info
     - name: Test Report
       uses: dorny/test-reporter@v1
       if: success() || failure()    # run this step even if previous step failed
