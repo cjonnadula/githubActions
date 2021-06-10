@@ -35,7 +35,7 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: |
-       echo "Log level: ${{ github.event.inputs.logLevel }}"
-       echo "Tags: ${{ github.event.inputs.tags }}" 
+       echo "Log level: ${{ github.event.inputs.testSuite }}"
+       echo "Tags: ${{ github.event.inputs.gitRepo }}" 
        ./gradlew test --info
             
