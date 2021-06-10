@@ -35,5 +35,5 @@ jobs:
       run: |
        echo "Regression Suite: ${{ github.event.inputs.testSuite }}"
        echo "Test Class: ${{ github.event.inputs.testClass }}" 
-       ./gradlew test Test1.java --info
+       ./gradlew test test1.java --info
             
