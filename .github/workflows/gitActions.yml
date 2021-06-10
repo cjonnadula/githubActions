@@ -7,11 +7,9 @@ on:
  workflow_dispatch:
     inputs:
       testSuite:
-        description: 'Test Suite Name'     
+        description: 'Regression Suite Name'     
         required: true
-        default: 'smoke'
-      gitRepo:
-        description: 'Git Repository url'  
+        default: 'smoke' 
       testClass:
         description: 'Test Class Path' 
 
@@ -35,7 +33,7 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: |
-       echo "Log level: ${{ github.event.inputs.testSuite }}"
-       echo "Tags: ${{ github.event.inputs.gitRepo }}" 
-       ./gradlew test --info
+       echo "Regression Suite: ${{ github.event.inputs.testSuite }}"
+       echo "Test Class: ${{ github.event.inputs.testClass }}" 
+       ./gradlew test ${{ github.event.inputs.testClass }} --info
             
