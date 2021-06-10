@@ -6,12 +6,14 @@ name: Java CI with Gradle
 on:
  workflow_dispatch:
     inputs:
-      logLevel:
-        description: 'Log level'     
+      testSuite:
+        description: 'Test Suite Name'     
         required: true
-        default: 'warning'
-      tags:
-        description: 'Test scenario tags'  
+        default: 'smoke'
+      gitRepo:
+        description: 'Git Repository url'  
+      testClass:
+        description: 'Test Class Path' 
 
 jobs:
   build:
