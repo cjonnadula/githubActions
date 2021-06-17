@@ -1,17 +1,19 @@
 package testcases;
-import org.testng.annotations.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 
-import common.WebDriverBase;
+public class test2 {
 
-public class test2 extends WebDriverBase{
-
-	@Test 
-    public void testTfact21012ADMApExCaseCreation() throws InterruptedException{
-		WebDriverBase.getDriver().get("https://www.google.com");
-	}
-	
-	@Test
-    public void testMyntra() throws InterruptedException{
-		WebDriverBase.getDriver().get("https://www.myntra.com");
+	public static void main(String[] args) {  
+		WebDriver driver=new ChromeDriver();  
+		
+        driver.get("http://www.facebook.com");
+        
+        WebElement mailID = driver.findElement(By.id("email"));
+        mailID.sendKeys("test1@gmail.com");
+        
+        driver.close();
 	}
 }
